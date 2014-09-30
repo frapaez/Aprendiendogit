@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\title{Tarea 9: Introducción a la física cuántica.}
+\author{Francisco Páez Larios}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Francisco Páez Larios}
+\rhead{23 de noviembre de 2013}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item Magnetón de Bhor: $$\mu_B= \frac{e \hbar}{2m_e} = 9.27 \times 10^{-24} \frac{J}{T}$$
+
+\item Sólo hay que hallar la velocidad angular:  $$ \frac{\hbar}{2}=L=I \omega \Rightarrow \omega = \frac{\hbar}{2I} \; \; I=\frac{2}{5} m_{e} R^{2} \Rightarrow \omega=\frac{5 \hbar}{4 m_e R^2}$$ La velocidad ecuatorial será: $$ R \omega = \frac{5 \hbar}{4 m_e R}= 1.4472 \times 10^{14} \frac{m}{s}$$
+
+\item .
+
+\item Configuraciones electrónicas: $${^7}N: 1s^2 2s^2 2p^3$$ $${^{11}}Na:1s^2 2s^2 2p^6 3s^1$$ $${^{26}}Fe: 1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$$ $${^{22}}Ti: 1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^2 $$ $${^{29}}Cu: 1s^2 2s^2 2p^6 3s^2 3p^6 3d^{10} 4s^1$$ $$ {^{47}}Ag: 1s^2 2s^2 2p^6 3s^3 3p^6 3d^{10} 4s^2 4p^6 4d^{10} 5s^1$$ $${^{79}}Au: 1s^2 2s^2 2p^6 3s^2 3p^6 33d^{10} 4s^2 4p^6 4d^{10} 4f^{14} 5s^2 5p^6 5d^{10} 6s^1 $$ 
+
+\item Reglas de Hund(sólo las hallé en ingles):
+\begin{itemize}
+\item For a given electron configuration, the term with maximum multiplicity has the lowest energy. The multiplicity is equal to $2S+1$, where $S$  is the total spin angular momentum for all electrons. The term with lowest energy is also the term with maximum $S$.
+
+Due to the Pauli exclusion principle, two electrons cannot share the same set of quantum numbers within the same system; therefore, there is room for only two electrons in each spatial orbital. One of these electrons must have (for some chosen direction z) $ S_z =\frac{1}{2}$, and the other must have$ S_z =-\frac{1}{2}$. Hund's first rule states that the lowest energy atomic state is the one which maximizes the sum of the S values for all of the electrons in the open subshell. The orbitals of the subshell are each occupied singly with electrons of parallel spin before double occupation occurs. (This is occasionally called the "bus seat rule" since it is analogous to the behaviour of bus passengers who tend to occupy all double seats singly before double occupation occurs.)
+
+\item For a given multiplicity, the term with the largest value of the total orbital angular momentum quantum number $L$  has the lowest energy.
+
+This rule deals with reducing the repulsion between electrons. It can be understood from the classical picture that if all electrons are orbiting in the same direction (higher orbital angular momentum) they meet less often than if some of them orbit in opposite directions. In the latter case the repulsive force increases, which separates electrons. This adds potential energy to them, so their energy level is higher.
+ 
+ \item For a given term, in an atom with outermost subshell half-filled or less, the level with the lowest value of the total angular momentum quantum number$J$  (for the operator$J=L+S$ ) lies lowest in energy. If the outermost shell is more than half-filled, the level with the highest value of  is lowest in energy.
+ 
+ This rule considers the energy shifts due to spin–orbit coupling. In the case where the spin–orbit coupling is weak compared to the residual electrostatic interaction, $L$ and $S$  are still good quantum numbers and the splitting is given by:
+ $$\Delta E  =  \zeta (L,S) \{ \mathbf{L}\cdot\mathbf{S} \} \\ 
+\  =  \ (1/2) \zeta (L,S) \{ J(J+1)-L(L+1)-S(S+1) \}$$
+The value of $ \zeta (L,S)\, $  changes from plus to minus for shells greater than half full. This term gives the dependence of the ground state energy on the magnitude of $ J \, $.
+
+\end{itemize}
+
+\item Notación espectroscópica (Otra vez sólo lo encontré en ingles).
+\begin{enumerate}
+\item Start with the most stable electron configuration. Full shells and subshells do not contribute to the overall angular momentum, so they are discarded. If all shells and subshells are full then the term symbol is ${^1}S_0$.
+
+\item Distribute the electrons in the available orbitals, following the Pauli exclusion principle. First, fill the orbitals with highest $m_l$ value with one electron each, and assign a maximal $m_s$ to them (i.e. $ \frac{1}{2}$). Once all orbitals in a subshell have one electron, add a second one (following the same order), assigning ms = $ - \frac{1}{2}$ to them.
+
+\item The overall S is calculated by adding the $m_s$ values for each electron. That is the same as multiplying $\frac{1}{2}$
+ times the number of unpaired electrons. 
+
+The overall L is calculated by adding the $m_l$ values for each electron (so if there are two electrons in the same orbital, add twice that orbital's $m_l$).
+
+\item Calculate J as: \begin{itemize}
+\item If less than half of the subshell is occupied, take the minimum value $J = |L - S|$.
+\item If more than half-filled, take the maximum value $J = L + S$.
+\item If the subshell is half-filled, then $L$ will be 0, so $J = S$.
+\end{itemize}
+\end{enumerate}
+\item \begin{itemize}
+\item Carbono: $${^6C: 1s^2 2s^2 2p^2}$$ $$C: {^3}P_0$$
+\item Nitrógeno: $${^7}N: 1s^2 2s^2 2p^3$$ $$N: {^4}S_\frac{3}{2}$$
+\item Oxigeno: $${^8}O: 1s^2 2s^2 2p^4$$ $$O: {^3}P_2$$
+\item Flúor: $${^9}F:1s^2 2s^2 2p^5$$ $$F: {^2}P_\frac{3}{2}$$
+\item Fósforo: $${^{15}}P: 1s^2 2s^2 2p^6 3s^2 3p^3$$ $$P:{^4}S_\frac{3}{2}$$
+\item Neón: $${^{10}}Ne: 1s^2 2s^2 2p^6$$ $$Ne:{^1}S_0$$
+\end{itemize}
+
+\item El imán intercactúa con el momento magnético y este depende del momento angular, que a su vez depende de los números $m_l$ y $m_s$ se observarán tantas bandas en la pantalla como momentos angulares netos distintos . Ya que las proyecciónes en $z$ del momento angular orbital y de espín pueden tomar tanto valores positivos como negativos, en total, habrá componentes que se anulen entre sí. Usando las reglas de Hund para $S=\sum m_s$, $L= \sum m_l$, $J$ del inciso anterior  y considerando las posibilidades que hay de combinarse, habrá un número de franjas igual a $2J+1$. De esta forma habrá cuatro franjas para el Nitrógeno, cinco para el Oxígeno, cuatro para Flúor, una para Neón, cuatro para Fósforo y una para Carbono.
+
+\item Ya que hay fuezas en direccion positiva y negativa, sólo hay que ver que se necesita para que haya un desviación $Z$ de 0.5 mm.
+
+$$F_z=\pm \frac{\partial B_z}{\partial z} \mu_B = m_p a \Rightarrow a= \pm \frac{\partial B_z}{\partial z} \frac{\mu_b}{m_p}  $$
+$$Z= \frac{1}{2} a t^2= \frac{1}{2} a \left( \frac{d}{v} \right)^2 $$
+$$Z= \pm \frac{1}{2} \Rightarrow \frac{\partial B_z}{\partial z} = \frac{m_p}{\mu_b} \left( \frac{v}{d} \right)^2 = 0.9 \frac{T}{m^2} $$
+
+\item El determiante de Slater será: $$\Psi_A=\frac{1}{\sqrt{3!}} \left|
+   \begin{array}{ccc}
+     \psi_\alpha (1)   &  \psi_\alpha (2) &  \psi_\alpha (3)  \\
+       \psi_\beta (1)   & \psi_\beta (2) & \psi_\beta (3)   \\
+      \psi_\gamma (1) & \psi_\gamma(2) & \psi_\gamma (3) \\
+   \end{array}
+\right|
+$$ 
+Desarrollando: \begin{eqnarray*}
+\lefteqn{ \Psi_A = \frac{1}{\sqrt{3!}} ( \psi_\alpha (1) \psi_\beta (2) \psi_\gamma (3) + \psi_\beta (1) \psi_\gamma (2) \psi_\alpha (3) + \psi_\gamma (1) \psi_\alpha (2) \psi_\beta (3) } \\ &  & - \psi_\gamma (1) \psi_\beta (2) \psi_\alpha (3) - \psi_\beta (1) \psi_\alpha (2) \psi_\gamma (3) - \psi_\alpha (1) \psi_\gamma (2) \psi_\beta (3))
+\end{eqnarray*}
+
+Si $\alpha=\beta$(los otros casos son análogos):
+\begin{eqnarray*}
+\lefteqn{ \Psi_A = \frac{1}{\sqrt{3!}} ( \psi_\alpha (1) \psi_\alpha (2) \psi_\gamma (3) + \psi_\alpha (1) \psi_\gamma (2) \psi_\alpha (3) + \psi_\gamma (1) \psi_\alpha (2) \psi_\alpha (3) } \\ &  & - \psi_\gamma (1) \psi_\alpha (2) \psi_\alpha (3) - \psi_\alpha (1) \psi_\alpha (2) \psi_\gamma (3) - \psi_\alpha (1) \psi_\gamma (2) \psi_\alpha (3)) \overbrace{=}^{indistinguibles} 0
+\end{eqnarray*}
+
+Esto es lo que sucede si las partículas cumplen el principio de exclusión pues impide que haya dos partículas con los mismos números cuánticos.
+
+\item \begin{itemize}
+\item Isótopo:
+
+Los diferentes isótopos de un elemento dado son elementos que tienen el mismo número atómico pero diferentes números de masa, pues tienen diferentes números de neutrones. Las propiedades químicas de los diferentes isótopos de un elemento son idénticas, pero a menudo tienen grandes diferencias en su estabilidad nuclear. En los isótopos estables de los elementos ligeros, el número de neutrones es casi igual al número de protones, pero un creciente exceso de neutrones es característico de elementos pesados estables. Una forma de denotar iótopos de un elemento es ${^A}{{_Z}X}$ donde $A=Z+N$ con $Z$ el número atómico, $N$ el número de neutrones y X el simbolo del elemento. Algunos ejemplos: ${_6}{^{12}}C$,${_6}{^{13}}C$ y ${_6}{^{14}}C$ son isótopos de carbono.
+
+\item Decaimiento beta
+
+La desintegración beta, emisión beta o decaimiento beta es un proceso mediante el cual un nucleido o núclido inestable emite una partícula beta (un electrón o positrón) para compensar la relación de neutrones y protones del núcleo atómico.
+Cuando esta relación es inestable, algunos neutrones se convierten en protones. Como resultado de esta mutación, cada neutrón emite una partícula beta y un antineutrino electrónico o un neutrino electrónico.
+La partícula beta puede ser un electrón, en una emisión beta menos $\beta - $, o un positrón, en una emisión beta más $ \beta +$. La diferencia fundamental entre un electrón $\beta - $ y la de un positrón $\beta + $ con respecto a la partícula beta correspondiente es el origen nuclear de aquéllos: no se trata de un electrón ordinario expulsado de un orbital atómico.
+En este tipo de desintegración, el número de neutrones y protones, o número másico, permanece estable, ya que la cantidad de neutrones disminuye una unidad y la de protones aumenta así mismo una unidad. El resultado del decaimiento beta es un núcleo en que el exceso de neutrones o protones se ha corregido en dos unidades y por tanto resulta más estable.
+
+\item Fuerza fuerte
+
+La interacción nuclear fuerte es una de las cuatro interacciones fundamentales que el modelo estándar de la física de partículas establece para explicar las fuerzas entre las partículas conocidas.
+Esta fuerza es la responsable de mantener unidos a los nucleones (protones y neutrones) que coexisten en el núcleo atómico, venciendo a la repulsión electromagnética entre los protones que poseen carga eléctrica del mismo signo (positiva) y haciendo que los neutrones, que no tienen carga eléctrica, permanezcan unidos entre sí y también a los protones.
+Los efectos de esta fuerza sólo se aprecian a distancias muy pequeñas, del tamaño de los núcleos atómicos.
+\end{itemize}
+\end{enumerate}
+
+\end{document}

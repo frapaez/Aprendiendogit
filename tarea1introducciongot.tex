@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\title{Tarea 1.}
+\author{Francisco Páez Larios}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Francisco Páez Larios}
+\rhead{12 de agosto de 2013}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+\item \textit{1) Defina Longitud de Onda.}
+
+La longitud de onda de una onda electromganética  $ \lambda $ se define como la distancia que recorre una onda electromagnética en un tiempo igual a un periodo. Esto se traduce en $ \lambda =\dfrac{C}{\nu} $ Donde $\nu$ es la velocidad de la onda en el medio y $\nu$  el número de oscialciones cíclicas que se arealizan en cada segundo.
+$ \diamond$\\
+
+\item \textit{2) Completar las frecuencias de la tabla del espectro visible.}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+ & Rojo& Amarillo &Naranja& Verde& Azul& Violeta \\ 
+\hline
+$ \lambda (nm)$& 700& 580& 620& 530& 470& 420 \\ 
+\hline 
+$ \lambda(\mu m)$ & 0.70& 0.58& 0.62& 0.53& 0.47& 0.42 \\
+\hline
+$\nu (THz) $& 428& 517& 483& 566& 638& 717 \\
+\hline
+\end{tabular}
+\end{center}
+
+\item \textit{3) ¿Qué regiones abarcan los rayos UVA, UVB y UVC?}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+UVA& UVB& UVC \\
+\hline
+315-400 nm& 280-315 nm & 100-280 nm \\
+\hline
+
+\end{tabular}
+\end{center}
+Pequenas dosis de radiación UV son beneficiosas para el ser humano y esenciales para la producción de vitamina D. La radiación UV también se utiliza para tratar diversas enfermedades, como el raquitismo, la psoriasis y el eczema.
+
+
+
+
+En el ser humano, una exposición prolongada a la radiación UV solar puede producir efectos agudos y crónicos en la salud de la piel, los ojos y el sistema inmunitario. Las quemaduras solares y el bronceado son los efectos agudos más conocidos de la exposición excesiva a la radiación UV; a largo plazo, se produce un envejecimiento prematuro de la piel como consecuencia de la degeneración de las células, del tejido fibroso y de los vasos sanguíneos inducida por la radiación UV. La radiación UV puede producir también reacciones oculares de tipo inflamatorio, como la queratitis actínica.
+Los efectos crónicos comprenden dos grandes problemas sanitarios: los cánceres de piel y las cataratas. Cada año, se producen en todo el mundo entre dos y tres millones de casos de cáncer de piel no melánico y aproximadamente 132 000 casos de cáncer de piel melánico. Los cánceres de piel no melánicos se pueden extirpar quirúrgicamente y rara vez son mortales, pero los melanomas malignos contribuyen de forma sustancial a la mortalidad en las poblaciones de piel clara. Entre 12 y 15 millones de personas padecen de ceguera causada por cataratas. Asimismo, cada vez hay más pruebas que indican que los niveles medioambientales de radiación UV pueden aumentar el riesgo de enfermedades infecciosas y limitar la eficacia de las vacunas.
+
+$Fuente: http://www.who.int/uv/publications/en/uvispa.pdf$
+\item \textit{4) ¿Qué región del espectro abarcan las ondas de radio?}
+
+
+Las ondas de radio abarcan la region del espectro cuya longitud de onda va desde $1mm$ a $100Km$ \\
+$Fuente: http://en.wikipedia.org/wiki/Radiowave$
+
+\item \textit{5) Encontrar la potencia radiada por una plancha de $1dm^2$ a 400ºC} \\
+Por la ley de Stefan-Boltzman:
+$$I=\sigma T^{4}=\frac{P}{a} \Rightarrow P= \sigma a T^{4} $$
+Donde $a$ es el area de la plancha($1dm^2$), $ \sigma $ es la constante de Stefan-Boltzman y $T$ es su temperatura ($400ºC= 673ºK$). Por tanto: $$P= 5.76*10^{-8}(673)^{4} \left( \frac{1}{10}\right) ^{2}= \underline{116.3 W} $$
+
+\item \textit{6) encontrar las temperaturas tales que la $ \lambda_{max}$ se encuentre en cada uno de los límites del espectro visible (400 y 700 nm). } \\
+Por el hallazgo de Wien: $$ \lambda_{max} T=K \Rightarrow T=\frac{K}{ \lambda_{max}}$$ Donde $T$ es la temperatura del cuerpo y $K=2.898*10^{-3} mK$. Por tanto: $$T_{rojo}=\frac{2.898*10^{-3}}{700*10^{-9}}= 4140ºK $$ $$ T_{violeta}=\frac{2.898*10^{-3}}{400*10^{-9}}= 7245ºK$$
+
+\item \textit{7) Se tiene una cavidad de $0.01 m^3$a $1000ºK$. Encontrar la energía que hay en un intervalo de $1\mu m$ alrededor del verde.} \\ 
+Por la fórmula de Raleigh-Jeans la energía $E$ por unidad de volumen  esta dada por: $$ \frac{E}{v}=-\frac{8 \pi k T }{\lambda^4} d \lambda \Rightarrow E=-8 \pi k T v \int_{\lambda_{0}}^{\lambda_{0}+1} \lambda ^{-4} d \lambda=8\pi K T v ( \frac{1}{3\lambda_{0}^{3}}-\frac{1}{3(\lambda_{0}+1)^3} ) = \underline{4.37*10^{-14}J}  $$
+
+
+\end{itemize}
+
+\end{document}

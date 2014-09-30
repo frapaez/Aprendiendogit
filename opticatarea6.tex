@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\title{Tarea 6 Óptica.}
+\author{Francisco Páez Larios}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Francisco Páez Larios}
+\rhead{27 de septiem de 2013}
+
+\begin{document}
+\maketitle
+
+
+\begin{itemize}
+
+\item \textit{Sea $ \psi_{1}=4 sin(2 \pi (0.2x-3t))=4sin( \overbrace{2\pi (0.2)}^{K} (x- \overbrace{15}^{V}t))  $}
+\begin{itemize}
+\item Frecuencia $$ \nu=\frac{1}{T} =\frac{v}{\lambda}=\frac{15}{3}=3 Hz $$
+\item Longitud de onda $$ 2\pi(0.2)=K=\frac{2\pi}{\lambda} \: \Rightarrow \lambda=\frac{1}{0.2}=5 $$
+\item Periodo $$ T=\frac{1}{\nu}=\frac{\lambda}{V}=\frac{5}{15}=\frac{1}{3} $$
+\item Ya que $  1 \leq | \sin \alpha| \: \forall \alpha $, el valor máximo de $ \psi_{1}$ (amplitud)  es 4
+\item Velocidad  de fase $$ V=\frac{\lambda}{T}=15$$
+\item El movimiento se da de izquierda a derecha
+\end{itemize}
+
+\item \textit{Sea $ \psi_{2}= \displaystyle \frac{1}{2.5} \sin(7x+3.5t)=\frac{1}{2.5} \sin \overbrace{7}^K (x-\overbrace{\frac{1}{2}}^{V} t)$}
+\begin{itemize}
+\item Frecuencia $$ \nu=\frac{1}{T} =\frac{v}{\lambda}=\frac{\frac{1}{2\pi}}{\frac{2\pi}{7}}=\frac{7}{4\pi} Hz $$
+\item Longitud de onda $$ 7=K=\frac{2\pi}{\lambda} \: \Rightarrow \lambda=\frac{2\pi}{7} $$
+\item Periodo $$ T=\frac{1}{\nu}=\frac{\lambda}{V}=\frac{4\pi}{7} $$
+\item Ya que $  1 \leq | \sin \alpha| \: \forall \alpha $, el valor máximo de $ \psi_{2}$ (amplitud)  es $\frac{1}{2.5}=0.4$
+\item Velocidad  de fase $$ V=\frac{\lambda}{T}=\frac{1}{2}$$
+\item El movimiento se da de derecha a izquierda
+\end{itemize}
+
+\item \textit{¿Cuál de las siguientes funciónes representa una onda viajera?}
+
+Sólo hay que ver que las funciónes dadas satisfacen la ecuación de onda:
+ \begin{equation}
+\frac{\partial^{2}f}{\partial x^{2}}= \frac{1}{v^{2}} \frac{\partial^{2}f}{\partial t^{2}}
+\end{equation}  
+
+\begin{itemize}
+\item$f(x,t)= e ^{- \left( a^{2}x^{2}+b^{2}t^{2}-2abtx \right) }$
+
+Usando en Mathematica 7 el siguiente código:
+\begin{verbatim}
+f[x_, t_] = Exp[-(a^2 x^2 + b^2 t^2 - 2 a*b*t*x)]
+D[D[f[x, t], x], x]
+D[D[f[x, t], t], t]
+Simplify[D[D[f[x, t], x], x]/D[D[f[x, t], t], t]]
+\end{verbatim}
+Así: 
+$$ \frac{\partial^{2}f}{\partial x^{2}} = e^{-a^2 x^2+2 a b t x-b^2 t^2} \left(2 a b t-2 a^2 x\right)^2-2 a^2 e^{-a^2 x^2+2 a b t x-b^2 t^2}$$
+$$  \frac{\partial^{2}f}{\partial t^{2}}= e^{-a^2 x^2+2 a b t x-b^2 t^2} \left(2 a b x-2 b^2 t\right)^2-2 b^2 e^{-a^2 x^2+2 a b t x-b^2 t^2}$$
+$$ \dfrac{\dfrac{\partial^{2}f}{\partial x^{2}}}{\dfrac{\partial^{2}f}{\partial t^{2}}}= \dfrac{a^{2}}{b^{2}} \; \; \;  \mbox{¡Se cumple la ecuación de onda!}$$
+Comparando la la tercera de estas ecuaciones con la ec.(1) vemos que la velocidad de la onda será $v=\frac{b}{a}$. Si b y a tienen el mismo signo, el movimiento será de izquierda a derecha,signos diferentes originaran un movimiento al revez.
+
+%\begin{figure}[H]
+  \centering
+    \includegraphics[width=7cm]{plot1}
+%\end{figure}
+
+\item $f(x,t)= A \sin (ax^{2}-bt)$
+
+Usando en Mathematica 7 el siguiente código:
+\begin{verbatim}
+f[x_, t_] = A*Sin[a*x^2 - b*t]
+D[D[f[x, t], x], x]
+D[D[f[x, t], t], t]
+\end{verbatim}
+Así:
+$$ \frac{\partial^{2}f}{\partial x^{2}} =4 a^2 A x^2 \sin \left(b t-a x^2\right)+2 a A \cos \left(b t-a x^2\right)$$
+$$ \frac{\partial^{2}f}{\partial t^{2}}= A b^2 \sin \left(b t-a x^2\right)$$
+$$ v^{2} \frac{\partial^{2}f}{\partial x^{2}} \neq \frac{\partial^{2}f}{\partial t^{2}} \; \mbox{ Para cualquier {\it v} constante} $$
+
+\item $f(x,t)= A \sin 2\pi (\frac{x}{a}+\frac{t}{b})^{2}$
+
+Usando en Mathematica 7 el siguiente código:
+\begin{verbatim}
+f[x_, t_] = A*Sin[2 \[Pi] (x/a + t/b)^2]
+D[D[f[x, t], x], x]
+D[D[f[x, t], t], t]
+Simplify[D[D[f[x, t], x], x]/D[D[f[x, t], t], t]]
+\end{verbatim}
+Así: 
+$$ \frac{\partial^{2}f}{\partial x^{2}} =  \frac{4 \pi  A \cos \left(2 \pi 
+   \left(\frac{x}{a}+\frac{t}{b}\right)^2\right)}{a^2}-\frac{16 \pi
+   ^2 A \left(\frac{x}{a}+\frac{t}{b}\right)^2 \sin \left(2 \pi 
+   \left(\frac{x}{a}+\frac{t}{b}\right)^2\right)}{a^2}$$
+$$  \frac{\partial^{2}f}{\partial t^{2}}= \frac{4 \pi  A \cos \left(2 \pi 
+   \left(\frac{x}{a}+\frac{t}{b}\right)^2\right)}{b^2}-\frac{16 \pi
+   ^2 A \left(\frac{x}{a}+\frac{t}{b}\right)^2 \sin \left(2 \pi 
+   \left(\frac{x}{a}+\frac{t}{b}\right)^2\right)}{b^2} $$
+$$ \dfrac{\dfrac{\partial^{2}f}{\partial x^{2}}}{\dfrac{\partial^{2}f}{\partial t^{2}}}= \dfrac{b^{2}}{a^{2}} \; \; \;  \mbox{¡Se cumple la ecuación de onda!}$$
+
+%\begin{figure}[H]
+  \centering
+    \includegraphics[width=7cm]{plot2}
+%\end{figure}
+
+Comparando la la tercera de estas ecuaciones con la ec.(1) vemos que la velocidad de la onda será $v=\frac{a}{b}$. Si los signo de a y b son diferentes, la onda viajará de izquierda a derecha; si son  iguales viajará de derecha a izquierda.
+
+
+\item $f(x,t)=A \cos^{2} 2\pi(t-x) $
+Usando en Mathematica 7 el siguiente código:
+\begin{verbatim}
+f[x_, t_] = A*Cos[2 \[Pi] (t - x)]*Cos[2 \[Pi] (t - x)]
+D[D[f[x, t], x], x]
+D[D[f[x, t], t], t]
+Simplify[D[D[f[x, t], x], x]/D[D[f[x, t], t], t]]
+\end{verbatim}
+Así: 
+$$ \frac{\partial^{2}f}{\partial x^{2}} =  8 \pi ^2 \sin ^2(2 \pi  (t-x))-8 \pi ^2 \cos ^2(2
+   \pi  (t-x))$$
+$$  \frac{\partial^{2}f}{\partial t^{2}}= 8 \pi ^2 \sin ^2(2 \pi  (t-x))-8 \pi ^2 \cos ^2(2
+   \pi  (t-x)) $$
+$$ \dfrac{\dfrac{\partial^{2}f}{\partial x^{2}}}{\dfrac{\partial^{2}f}{\partial t^{2}}}= 1 \; \; \;  \mbox{¡Se cumple la ecuación de onda!}$$
+Comparando la la tercera de estas ecuaciones con la ec.(1) vemos que la velocidad de la onda será $v=1$. La onda se desplazará de izquierda a derecha.
+
+%\begin{figure}[H]
+  \centering
+    \includegraphics[width=7cm]{plot3}
+%\end{figure}
+
+\end{itemize}
+\item \textit{Sean $E_{1}=E_{0} \sin[k(x+\Delta x)- \omega t]$ y $E_{2}=E_{0} \sin(kx- \omega t) $}
+
+$$E_{1}+E_{2}=E_{0} \sin[k(x+\Delta x)- \omega t]+E_{0} \sin(kx- \omega t)=E_{0}(\sin[k(x+\Delta x)- \omega t]+\sin(kx- \omega t)) \overbrace{=}^ \bullet $$ $$2 E_{0} \sin \left(  \frac{k(x+\Delta x)- \omega t+kx- \omega t}{2} \right)  \cos \left(  \frac{k(x+\Delta x)- \omega t-kx+ \omega t}{2} \right) = $$ 
+$$2 E_{0} \sin \left(  \frac{kx+k \Delta x)- \omega t+kx- \omega t}{2} \right)  \cos \left(  \frac{k(x+\Delta x)- \omega t-kx+ \omega t}{2} \right)  = $$
+$$2E_{0} \sin \left(  \frac{2kx-2 \omega t+ k \Delta x}{2} \right) \cos \left(  \frac{kx+ k \Delta x- \omega t -kx+\omega t}{2 } \right) =$$
+$$ 2E_{0} \cos \left( \frac{k \Delta x}{2} \right) \sin \left( k \left(  x + \frac{\Delta x}{2} \right) - \omega t \right)    $$
+
+$$\bullet \sin(a)+\sin(b)=2\sin(\frac{a+b}{2}) \cos(\frac{a-b}{2})$$
+
+\item \textit{La relación de despersión en un medio es $\omega= a k^{2}$}
+\begin{itemize}
+\item La veocidad de fase: $$v=\frac{w}{k}=\frac{a k^{2}}{k}=aK$$
+\item La velocidad de grupo: $$ v_{g}= \frac{\partial w}{\partial k}=\frac{\partial (a k^{2})}{\partial k}=2ak$$
+\end{itemize}
+
+\item \textit{Demostrar que la velocidad de grupo se puede escribir como $v_{g}=v- \lambda \frac{dV}{d \lambda}$} 
+$$ v_g=\frac{{d}\omega}{{d}k}=\frac{{d}(v\cdot k)}{{d}k}=v\frac{{d}k}{{d}k}+k\frac{{d}v}{{d}k}= $$
+\begin{equation}
+v + \left( \frac{2 \pi}{ \lambda} \right) \left( \frac{dv}{d \lambda} \frac{d \lambda}{d k} \right)
+\end{equation} 
+
+\begin{equation}
+k=\frac{2\pi}{\lambda} \; \Rightarrow \; dk=-\frac{2 \pi}{\lambda^{2}} d \lambda \; \Rightarrow \; \frac{d \lambda}{dk}=-\frac{\lambda^{2}}{2\pi}
+\end{equation}
+Sustituyendo (3) en (2):
+$$v + \left( \frac{2 \pi}{ \lambda} \right) \left( \frac{d \lambda}{d k} \frac{dv}{d \lambda} \right) = v+ \left( \frac{2 \pi}{ \lambda} \right) \left(  - \frac{\lambda^{2}}{2 \pi} \right)  \frac{dv}{d \lambda} = $$
+$$v- \lambda \frac{dv}{d \lambda}$$
+\end{itemize}
+\end{document}
